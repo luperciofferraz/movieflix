@@ -12,9 +12,9 @@ Desenvolvido utilizando Spring Boot, o Back-End do projeto está sendo concebido
 
 - Resource: Classes de Endpoints, onde são recebidas as requisições dos usuários.
 - DTO: Classes que montam o conteúdo e o formato das informações que serão trafegadas entre o Cliente e o Servidor, trazendo os seguintes benefícios.
-    -- Recebimento e envio somente da informação necessária.
-    -- Evitando o contato direto à camada de acesso ao Banco de Dados e seu contexto de persistência.
-    -- Enviando respostas ao cliente em um formato padronizado e amigável.
+    - Recebimento e envio somente da informação necessária.
+    - Evitando o contato direto à camada de acesso ao Banco de Dados e seu contexto de persistência.
+    - Enviando respostas ao cliente em um formato padronizado e amigável.
 - Repository: Camada de Acesso aos dados, padrão Repository do Spring Boot.
 - Entity: Classes de Entidades do Banco de Dados
 - Service: Classes de Serviços quem fazem o 'meio-de-campo' entre as Classes Resource e Repository.
