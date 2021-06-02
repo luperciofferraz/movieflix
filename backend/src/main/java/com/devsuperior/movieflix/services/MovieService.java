@@ -99,7 +99,6 @@ public class MovieService {
 	}
 
 	private void copyDtoToEntity(MovieDTO dto, Movie entity) {
-		entity.setGenre(dto.getGenre());
 		entity.setTitle(dto.getTitle());
 		entity.setSubTitle(dto.getSubTitle());
 		entity.setImgUrl(dto.getImgUrl());

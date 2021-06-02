@@ -9,8 +9,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.devsuperior.movieflix.dto.ReviewDTO;
+import com.devsuperior.movieflix.entities.Movie;
 import com.devsuperior.movieflix.entities.Review;
+import com.devsuperior.movieflix.entities.User;
+import com.devsuperior.movieflix.repositories.MovieRepository;
 import com.devsuperior.movieflix.repositories.ReviewRepository;
+import com.devsuperior.movieflix.repositories.UserRepository;
 import com.devsuperior.movieflix.services.exceptions.ResourceNotFoundException;
 
 @Service
@@ -18,7 +22,13 @@ public class ReviewService {
 
 	@Autowired
 	private ReviewRepository repository;
-	
+
+	@Autowired
+	private UserRepository userRepository;
+
+	@Autowired
+	private MovieRepository movieRepository;
+
 	@Transactional(readOnly = true)
 	public Page<ReviewDTO> findAll(PageRequest pageRequest) {
 	
@@ -43,9 +53,13 @@ public class ReviewService {
 		
 		Review entity = new Review();
 		
+		User user = userRepository.getOne(dto.getUser().getId());
+		entity.setUser(user);
+		
+		Movie movie = movieRepository.getOne(dto.getMovie().getId());
+		entity.setMovie(movie);
+		
 		entity.setText(dto.getText());
-		entity.setUser(dto.getUser());
-		entity.setMovie(dto.getMovie());
 		
 		entity = repository.save(entity);
 		
