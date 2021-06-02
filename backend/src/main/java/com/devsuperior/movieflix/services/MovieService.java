@@ -36,7 +36,7 @@ public class MovieService {
 		
 		Page<Movie> page = repository.find(genre, pageRequest);
 		
-		return page.map(x -> new MovieDTO(x));
+		return page.map(x -> new MovieDTO(x, x.getReviews()));
 	}
 
 	@Transactional(readOnly = true)
