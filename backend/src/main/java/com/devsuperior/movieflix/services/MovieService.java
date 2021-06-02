@@ -34,7 +34,7 @@ public class MovieService {
 	
 		Genre genre = (genreId == 0) ? null : genreRepository.getOne(genreId);
 		
-		Page<Movie> page = repository.findByGenre(genre, pageRequest);
+		Page<Movie> page = repository.find(genre, pageRequest);
 		
 		return page.map(x -> new MovieDTO(x));
 	}
