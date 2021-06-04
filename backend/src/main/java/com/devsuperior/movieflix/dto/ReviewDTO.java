@@ -21,6 +21,8 @@ public class ReviewDTO implements Serializable {
 	
 	private MovieDTO movie;
 	
+	private Long movieId;
+	
 	public ReviewDTO() {
 		
 	}
@@ -69,5 +71,13 @@ public class ReviewDTO implements Serializable {
 
 	public void setMovie(MovieDTO movie) {
 		this.movie = movie;
+	}
+
+	public Long getMovieId() {
+		return movieId;
+	}
+
+	public void setMovieId(Long movieId) {
+		this.movieId = movieId;
 	}
 }

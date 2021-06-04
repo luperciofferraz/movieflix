@@ -26,6 +26,8 @@ public class MovieDTO implements Serializable {
 	
 	private GenreDTO genre;
 
+	private Long genreId;
+	
 	private List<ReviewDTO> reviews = new ArrayList<>();
 	
 	public MovieDTO() {
@@ -119,6 +121,14 @@ public class MovieDTO implements Serializable {
 
 	public void setReviews(List<ReviewDTO> reviews) {
 		this.reviews = reviews;
+	}
+
+	public Long getGenreId() {
+		return genreId;
+	}
+
+	public void setGenreId(Long genreId) {
+		this.genreId = genreId;
 	}
 
 }
