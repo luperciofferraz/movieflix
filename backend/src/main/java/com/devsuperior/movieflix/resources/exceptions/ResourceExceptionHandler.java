@@ -15,6 +15,7 @@ import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
 import com.devsuperior.movieflix.services.exceptions.DatabaseException;
 import com.devsuperior.movieflix.services.exceptions.ResourceNotFoundException;
+import com.devsuperior.movieflix.services.exceptions.UnprocessableEntityException;
 
 @ControllerAdvice
 public class ResourceExceptionHandler {
@@ -112,4 +113,20 @@ public class ResourceExceptionHandler {
 		
 		return ResponseEntity.status(status).body(err);
 	}
+	
+	@ExceptionHandler(UnprocessableEntityException.class)
+	public ResponseEntity<StandardError> unprocessableEntity(UnprocessableEntityException e, HttpServletRequest request) {
+		
+		HttpStatus status = HttpStatus.UNPROCESSABLE_ENTITY;
+		
+		StandardError err = new StandardError();
+		err.setTimestamp(Instant.now());
+		err.setStatus(status.value());
+		err.setError("Unprocessable Entity Exception");
+		err.setMessage(e.getMessage());
+		err.setPath(request.getRequestURI());
+		
+		return ResponseEntity.status(status).body(err);
+	}
+
 }

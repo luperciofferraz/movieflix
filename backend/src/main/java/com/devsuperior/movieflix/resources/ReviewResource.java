@@ -2,6 +2,8 @@ package com.devsuperior.movieflix.resources;
 
 import java.net.URI;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,7 +24,8 @@ public class ReviewResource {
 	
 
 	@PostMapping
-	public ResponseEntity<ReviewDTO> insert(@RequestBody ReviewDTO dto) {
+	public ResponseEntity<ReviewDTO> insert(@Valid @RequestBody ReviewDTO dto) {
+		
 		
 		dto = service.insert(dto);
 		
