@@ -3,6 +3,7 @@ import Navbar from './core/components/Navbar';
 import Movies from './pages/Movies';
 import MovieDetails from './pages/Movies/MovieDetails';
 import Login from './pages/Auth/components/Login';
+import Auth from './pages/Auth';
 import history from './core/utils/history';
 
 const Routes = () => (
@@ -14,7 +15,7 @@ const Routes = () => (
         <Switch>
 
             <Route path="/" exact>
-                <Login />
+                <Auth />
             </Route>
 
             <Route path="/movies" exact> 

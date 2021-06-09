@@ -29,7 +29,7 @@ const Navbar = () => {
     
     return (
 
-        <nav className = "bg-primary main-nav">
+        <nav className = "main-nav navbar-buttons-icons-color">
 
             <Link to="/" className="nav-logo-text">
                 <h4>MovieFlix</h4>

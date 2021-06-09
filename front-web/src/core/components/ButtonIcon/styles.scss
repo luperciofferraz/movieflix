@@ -1,6 +1,7 @@
 .default-button {
 
     display: flex;
+    border-radius: 10px;
 
 }
 
@@ -12,12 +13,13 @@
     width: 380px;
     border-radius: 10px 0px 0px 10px;
     text-transform: uppercase;
+    border: 0;
 
 }
 
 .btn-icon-content {
 
-    background-color: #33569b;
+    background-color: rgb(38, 50, 56, 0.5);
     width: 70px;
     border-radius: 0px 10px 10px 0px;
     display: flex;
