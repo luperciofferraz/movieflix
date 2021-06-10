@@ -9,7 +9,7 @@ export type Movie = {
 
     id: number;
     title: string;
-    subtitle: string;
+    subTitle: string;
     synopsis: string;
     imgUrl: string;
     year: number;

@@ -19,7 +19,7 @@ const Movies = () => {
 
         const params = {
             page: activePage,
-            linesPerPage: 3,
+            linesPerPage: 8,
             genreId: genre?.id
         }
 
@@ -47,13 +47,10 @@ const Movies = () => {
 
     return    (
 
-        <div className="catalog-container">
+        <div className="catalog-container pages-color">
 
             <div className="filter-container">
 
-                <h1 className="catalog-title">
-                    Catálogo de Filmes
-                </h1>
                 <MovieFilter 
                     genre={genre}
                     handleChangeGenre = {handleChangeGenre}

@@ -4,7 +4,7 @@ import Login from './components/Login';
 
 const Auth = () => (
 
-    <div className="auth-container pages-color">
+    <div className="auth-container">
 
         <div className="auth-info">
 

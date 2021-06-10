@@ -22,6 +22,18 @@ const MovieCard = ( { movie }: Props) => (
 
             </h6>
 
+            <h5 className="product-year">
+
+                {movie.year}
+
+            </h5>
+
+            <h5 className="product-subtitle">
+
+                {movie.subTitle}
+
+            </h5>
+
         </div>
 
     </div>

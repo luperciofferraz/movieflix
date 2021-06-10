@@ -6,10 +6,10 @@ import './app.scss';
 const App = () => {
 
   return (
-      <>
+      <div className="pages-color">
           <Routes />
           <ToastContainer />
-      </>
+      </div>
   );
 }
 
