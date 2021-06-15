@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { ReactComponent as ArrowIcon } from '../../../core/assets/images/arrow.svg';
+import { useParams } from 'react-router-dom';
 import { Movie } from '../../../core/types/Movie';
 import { makePrivateRequest } from '../../../core/utils/request';
 import MovieInfoLoader from '../Loaders/MovieInfoLoader';
@@ -8,6 +7,7 @@ import MovieDescriptionLoader from '../Loaders/MovieDescriptionLoader';
 import { Editor } from "react-draft-wysiwyg";
 import { stateFromHTML } from 'draft-js-import-html';
 import { EditorState } from 'draft-js';
+import { ReactComponent as StarImage } from './../../core/assets/images/star.svg';
 import './styles.scss';
 
 type ParamsType = {
@@ -43,55 +43,69 @@ const MovieDetails = () => {
 
         <div className="product-details-container">
 
-            <div className="card-base border-radius-20 product-details">
+            <div className="card-base border-radius-10">
 
-                <Link to="/movies" className="product-details-goback">
-                    <ArrowIcon className="icon-goback" />
-                    <h1 className="text-goback">voltar</h1>
-                </Link>
                 <div className="product-details-info">
 
-                    <div className="product-image-price">
-
                     {isLoading ? <MovieInfoLoader /> : (
-                        <>
 
-                            <div className="product-details-card text-center">
+                        <div className="product-details-card">
 
-                                <img src={movie?.imgUrl} alt={movie?.title} className="product-details-image" />
+                            <img src={movie?.imgUrl} alt={movie?.title} className="product-details-image" />
 
-                            </div>
-
-                            <div className="product-info-fields">
-
-                                <h1 className="product-details-name">
-                                    {movie?.title}
-                                </h1>
-
-                            </div>
-                            
-                        </>
+                        </div>
                     )}
-
-                    </div>
 
                     <div className="product-details-card">
                         {isLoading ? <MovieDescriptionLoader /> : (
 
                             <>
-                                <h1 className="product-description-title">Synopsis do Filme</h1>
+                                <div className="product-info-fields">
+
+                                    <div className="movie-details-title">
+                                        {movie?.title}
+                                    </div>
+
+                                    <div className="movie-details-year">
+                                        {movie?.year}
+                                    </div>
+
+                                    <div className="movie-details-subtitle">
+                                        {movie?.subTitle}
+                                    </div>
+
+                                </div>
+
                                 <Editor
-                                    editorClassName="product-description-text"
+                                    editorClassName="movie-details-synopsis"
                                     editorState={descriptionAsEditorState}
                                     toolbarHidden
                                     readOnly
                                 />
+
                             </>
 
                         )}
                     </div>
 
                 </div>
+
+            </div>
+
+            <div className="review-container" >
+
+                {movie?.reviews.map( review => (
+                    <div>
+                        <div className="movie-reviews-autor">
+                            <StarImage />
+                            
+                            {review.user.name}
+                        </div>
+                        <div className="movie-reviews-text">
+                            {review.text}
+                        </div>
+                    </div>
+                ))}
 
             </div>
 
