@@ -72,7 +72,6 @@
     padding-bottom: 20px;
     padding-top: 15px;
 
-
 }
 
 .movie-reviews-autor {
@@ -83,6 +82,7 @@
     color: #FFFFFF;
     padding-left: 10px;
     padding-right: 10px;
+    display: flex;
 }
 
 .movie-reviews-text {
@@ -98,6 +98,9 @@
     margin: 10px;
 }
 
+.start-image {
+    align-items: center;
+}
 
 @media (max-width: 768px) {
 

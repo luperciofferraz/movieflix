@@ -7,7 +7,7 @@ import MovieDescriptionLoader from '../Loaders/MovieDescriptionLoader';
 import { Editor } from "react-draft-wysiwyg";
 import { stateFromHTML } from 'draft-js-import-html';
 import { EditorState } from 'draft-js';
-import { ReactComponent as StarImage } from './../../core/assets/images/star.svg';
+import { ReactComponent as StarImage } from '../../../core/assets/images/star.svg';
 import './styles.scss';
 
 type ParamsType = {
@@ -97,8 +97,9 @@ const MovieDetails = () => {
                 {movie?.reviews.map( review => (
                     <div>
                         <div className="movie-reviews-autor">
-                            <StarImage />
-                            
+                            <div className="star-image">
+                                <StarImage />
+                            </div>
                             {review.user.name}
                         </div>
                         <div className="movie-reviews-text">
