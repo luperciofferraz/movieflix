@@ -28,5 +28,8 @@ INSERT INTO tb_movie (title, sub_title, synopsis, year, img_url, genre_id) VALUE
 INSERT INTO tb_movie (title, sub_title, synopsis, year, img_url, genre_id) VALUES ('10.Raya e o Último Dragão', 'Raya e o Último Dragão subtitle', 'Raya e o Último Dragão acompanha a jovem que dá nome ao filme em uma aventura para salvar sua cidade e família.', 2010, 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/qqkpwhiB1BQcSvegL10uHKMzKKl.jpg', 7);
 
 INSERT INTO TB_REVIEW (TEXT, MOVIE_ID, USER_ID) VALUES ('Muito bom', 1, 2);
+INSERT INTO TB_REVIEW (TEXT, MOVIE_ID, USER_ID) VALUES ('Mais ou Menos', 1, 2);
+INSERT INTO TB_REVIEW (TEXT, MOVIE_ID, USER_ID) VALUES ('Muito chato', 1, 2);
+INSERT INTO TB_REVIEW (TEXT, MOVIE_ID, USER_ID) VALUES ('Muito bom', 2, 2);
 INSERT INTO TB_REVIEW (TEXT, MOVIE_ID, USER_ID) VALUES ('Mais ou Menos', 2, 2);
 INSERT INTO TB_REVIEW (TEXT, MOVIE_ID, USER_ID) VALUES ('Muito chato', 3, 2);
