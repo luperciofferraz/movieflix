@@ -1,5 +1,5 @@
 .product-details-container {
-    margin: 40px 135px 0px 135px;
+    padding: 40px 135px 70px 135px;
 }
 
 .product-details-info {
@@ -63,43 +63,53 @@
     border-radius: 10px;
     border: 1px solid #FFFFFF;
     padding: 10px;
+    margin-top: 10px;
 }
 
-.review-container {
+.movie-reviews-container {
 
     background-color: #6C6C6C;
     border-radius: 10px;
     padding-bottom: 20px;
     padding-top: 15px;
+    margin-bottom: 10px;
 
 }
 
 .movie-reviews-autor {
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 25px;
-    letter-spacing: -0.015em;
-    color: #FFFFFF;
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
 }
 
+.movie-reviews-star-image {
+    padding-left: 10px;
+    padding-right: 15px;
+    align-items: center;
+}
+
+.movie-reviews-autor-name {
+
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #FFFFFF;
+
+}
+
 .movie-reviews-text {
+    
     font-weight: normal;
     font-size: 14px;
     line-height: 22px;
     text-align: justify;
     letter-spacing: -0.015em;
     color: #9E9E9E;
-    border-radius: 20px;
+    border-radius: 15px;
     border: 1px solid #FFFFFF;
     padding: 10px;
     margin: 10px;
-}
-
-.start-image {
-    align-items: center;
 }
 
 @media (max-width: 768px) {

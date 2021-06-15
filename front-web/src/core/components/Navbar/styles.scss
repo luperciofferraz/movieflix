@@ -4,7 +4,7 @@
 
     height: 70px;
 
-    color: #FFF;
+    color: #000000;
 
     display: flex;
 
@@ -21,13 +21,27 @@
 
 .nav-logo-text {
     width: 30%;
-    color: #FFF;
+    color: #000000;
 }
 
 .menu-mobile-btn {
 
     display: none;
 
+}
+
+.button-logout {
+    border: 2px solid #000000;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #000000;
+    padding: 5px 15px;
+
+    
 }
 
 .menu-container {
@@ -65,12 +79,12 @@
 
     &.active {
         font-weight: bold;
-        color: #FFF;
+        color: #000000;
     }
 
     &:hover {
 
-        color: #FFF;
+        color: #000000;
     }
 }
 

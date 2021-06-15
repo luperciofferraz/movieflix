@@ -31,7 +31,7 @@ const Navbar = () => {
 
         <nav className = "main-nav navbar-buttons-icons-color">
 
-            <Link to="/" className="nav-logo-text">
+            <Link to="/movies" className="nav-logo-text">
                 <h4>MovieFlix</h4>
             </Link>
 
@@ -48,8 +48,7 @@ const Navbar = () => {
             <div className="user-info-dnone text-right">
 
                 {currentUser && (
-                    <>
-                        {currentUser}
+                    <div className="button-logout">
                         <a href="#logout" 
                            className="nav-link active d-inline"
                            onClick={ (e) => {
@@ -60,10 +59,11 @@ const Navbar = () => {
                         
                             } }
                         >
-                            LOGOUT
+                            
+                            SAIR
                         </a>
 
-                    </>
+                    </div>
                 )}
 
             </div>

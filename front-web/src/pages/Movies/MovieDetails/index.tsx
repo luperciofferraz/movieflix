@@ -92,15 +92,19 @@ const MovieDetails = () => {
 
             </div>
 
-            <div className="review-container" >
+            {movie?.reviews.length ?
+
+            <div className="movie-reviews-container" >
 
                 {movie?.reviews.map( review => (
                     <div>
                         <div className="movie-reviews-autor">
-                            <div className="star-image">
+                            <div className="movie-reviews-star-image">
                                 <StarImage />
                             </div>
-                            {review.user.name}
+                            <div className="movie-reviews-autor-name">
+                                {review.user.name}
+                            </div>
                         </div>
                         <div className="movie-reviews-text">
                             {review.text}
@@ -109,6 +113,10 @@ const MovieDetails = () => {
                 ))}
 
             </div>
+
+            : <></>
+
+            }
 
         </div>
 
