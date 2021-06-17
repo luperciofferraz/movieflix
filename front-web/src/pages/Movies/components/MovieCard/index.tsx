@@ -1,5 +1,5 @@
 import './styles.scss';
-import { Movie } from '../../../core/types/Movie';
+import { Movie } from '../../../../core/types/Movie';
 
 type Props = {
 

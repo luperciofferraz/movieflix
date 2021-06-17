@@ -1,8 +1,7 @@
 import { Redirect, Router, Switch, Route } from 'react-router-dom';
 import Navbar from './core/components/Navbar';
 import Movies from './pages/Movies';
-import MovieDetails from './pages/Movies/MovieDetails';
-import Login from './pages/Auth/components/Login';
+import MovieDetails from './pages/Movies/components/MovieDetails';
 import Auth from './pages/Auth';
 import history from './core/utils/history';
 
@@ -29,7 +28,7 @@ const Routes = () => (
             <Redirect from="/auth" to="/auth/login" exact />
             
             <Route path="/auth"> 
-                <Login />
+                <Auth />
             </Route>
 
         </Switch>

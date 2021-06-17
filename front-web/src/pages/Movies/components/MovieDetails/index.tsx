@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Movie } from '../../../core/types/Movie';
-import { makePrivateRequest } from '../../../core/utils/request';
-import MovieInfoLoader from '../Loaders/MovieInfoLoader';
-import MovieDescriptionLoader from '../Loaders/MovieDescriptionLoader';
+import { Movie } from '../../../../core/types/Movie';
+import { makePrivateRequest } from '../../../../core/utils/request';
+import MovieInfoLoader from '../../components/Loaders/MovieInfoLoader';
+import MovieDescriptionLoader from '../../components/Loaders/MovieDescriptionLoader';
 import { Editor } from "react-draft-wysiwyg";
 import { stateFromHTML } from 'draft-js-import-html';
 import { EditorState } from 'draft-js';
-import { ReactComponent as StarImage } from '../../../core/assets/images/star.svg';
+import Form from '../Form';
+import { ReactComponent as StarImage } from '../../../../core/assets/images/star.svg';
 import './styles.scss';
 
 type ParamsType = {
@@ -91,6 +92,8 @@ const MovieDetails = () => {
                 </div>
 
             </div>
+
+            <Form />
 
             {movie?.reviews.length ?
 

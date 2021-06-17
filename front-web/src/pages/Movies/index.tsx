@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useState } from 'react';
 import './styles.scss';
-import MovieCard from './MovieCard';
+import MovieCard from './components/MovieCard';
 import { Link } from 'react-router-dom';
 import { makeRequest } from '../../core/utils/request';
 import { Genre, MoviesResponse } from '../../core/types/Movie';
-import MovieCardLoader from '../Movies/Loaders/MovieCardLoader';
+import MovieCardLoader from './components/Loaders/MovieCardLoader';
 import Pagination from '../../core/components/Pagination';
 import MovieFilter from '../../core/components/MovieFilter';
 
