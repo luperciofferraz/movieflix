@@ -29,17 +29,7 @@ const Form = () => {
         data.movieId = parseInt(movieId);
         data.userId = userId;
 
-        console.log(data);
-
-        const payload = {
-            data
-        }
-
-        makePrivateRequest({ 
-            url: '/reviews', 
-            method: 'POST', 
-            data: payload 
-        })
+        makePrivateRequest({ url: '/reviews', method: 'POST', data })
         .then( () => {
 
             toast.info('Avaliação salva com sucesso!');
