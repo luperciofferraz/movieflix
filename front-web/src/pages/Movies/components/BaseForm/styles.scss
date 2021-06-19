@@ -2,33 +2,28 @@
     flex: 1;
     align-items: center;
     justify-content: center;
-    padding: 70px 45px 50px 45px;
+    padding: 20px 45px 20px 45px;
     border-radius: 20px;
     margin-bottom: 15px;
 }
 
-.base-form-title {
-    font-size: 24px;
-    line-height: 33px;
-    letter-spacing: -0.015em;
-    color: #263238;
-    text-transform: uppercase;
-    margin-bottom: 45px;
-}
-
 .base-form-actions {
-
-    margin-top: 70px;
-    text-align: right;
+    margin-top: 10px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
 }
 
 .button-salvar {
+    padding: 15px 80px 15px 80px;
     font-weight: bold;
     font-size: 16px;
     line-height: 22px;
     text-align: center;
     letter-spacing: -0.015em;
     color: #000000;
+    border: none;
 }
 
 @media (max-width: 768px) {

@@ -29,16 +29,17 @@ const MovieDetails = () => {
     useEffect(() => {
 
         setIsLoading(true);
+
         makePrivateRequest({ url: `/movies/${movieId}` })
             .then(response => 
                 {
                     setMovie(response.data);
-                    setListaReviews(movie?.reviews);
+                    setListaReviews(response.data.reviews);
                 }
             )
             .finally(() => setIsLoading(false));
 
-    },  [movieId,  movie?.reviews]);
+    },  [movieId]);
 
     return (
 
@@ -95,7 +96,7 @@ const MovieDetails = () => {
 
             <Form />
 
-            {movie?.reviews.length ?
+            {listaReviews?.length ?
 
             <div className="movie-reviews-container" >
 
