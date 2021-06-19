@@ -20,7 +20,7 @@
 
     .product-categories-select__control {
     
-        width: 20%;
+        width: 30%;
         height: 30px;
         border: 1;
         border-radius: 10px;
@@ -48,6 +48,15 @@
 }
 
 @media (max-width: 768px) {
+
+    .filter-select-container {
+
+        .product-categories-select__control {
+    
+            width: 100%;
+            height: 30px;
+        }
+    }
 
     .product-filters-container {
 
@@ -78,9 +87,12 @@
         width: 100%;
 
         margin: 10px 0px;
+
+        .product-categories-select__control {
+    
+            width: 100%;
+            height: 30px;
+        }
+    
     }
-
-
-
-
 }
