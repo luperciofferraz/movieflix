@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Movie } from '../../../../core/types/Movie';
+import { Movie, Review } from '../../../../core/types/Movie';
 import { makePrivateRequest } from '../../../../core/utils/request';
 import MovieInfoLoader from '../../components/Loaders/MovieInfoLoader';
 import MovieDescriptionLoader from '../../components/Loaders/MovieDescriptionLoader';
@@ -20,6 +20,7 @@ type ParamsType = {
 const MovieDetails = () => {
 
     const { movieId } = useParams<ParamsType>();
+    const [listaReviews, setListaReviews] = useState<Review[]>();
     const [movie, setMovie] = useState<Movie>();
     const [isLoading, setIsLoading] = useState(false);
     const contentState = stateFromHTML(movie?.synopsis || '');
@@ -31,14 +32,13 @@ const MovieDetails = () => {
         makePrivateRequest({ url: `/movies/${movieId}` })
             .then(response => 
                 {
-                    console.log(movieId);
-                    console.log(response.data);
                     setMovie(response.data);
+                    setListaReviews(movie?.reviews);
                 }
             )
             .finally(() => setIsLoading(false));
 
-    }, [movieId]);
+    },  [movieId,  movie?.reviews]);
 
     return (
 
@@ -99,7 +99,7 @@ const MovieDetails = () => {
 
             <div className="movie-reviews-container" >
 
-                {movie?.reviews.map( review => (
+                {listaReviews?.map( review => (
                     <div>
                         <div className="movie-reviews-autor">
                             <div className="movie-reviews-star-image">

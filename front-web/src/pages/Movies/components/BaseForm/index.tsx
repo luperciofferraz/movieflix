@@ -23,8 +23,8 @@ const BaseForm = ( { title, children } : Props) => {
 
             <div className="base-form-actions">
 
-                <button className="btn btn-primary border-radius-10">
-                    SALVAR
+                <button className="button-salvar navbar-buttons-icons-color border-radius-10">
+                    SALVAR AVALIAÇÃO
                 </button>
 
             </div>

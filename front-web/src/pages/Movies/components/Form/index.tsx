@@ -1,5 +1,4 @@
 import { makePrivateRequest } from '../../../../core/utils/request';
-import { toast } from 'react-toastify';
 import { useForm } from 'react-hook-form';
 import { useHistory, useParams } from 'react-router-dom';
 import { getSessionData } from '../../../../core/utils/auth';
@@ -32,16 +31,9 @@ const Form = () => {
         makePrivateRequest({ url: '/reviews', method: 'POST', data })
         .then( () => {
 
-            toast.info('Avaliação salva com sucesso!');
             history.push(`/movies/${movieId}`);
 
-        })
-        .catch(() => {
-
-            toast.error('Erro ao salvar avaliação!');
-
         });
-
     }
 
     return (
@@ -54,7 +46,9 @@ const Form = () => {
 
                 <div className="margin-bottom-30">
 
-                    <textarea
+                    <textarea 
+                        rows={10}
+                        cols={50}
                         className={`form-control input-base ${errors.text ? 'is-invalid' : ''} `} 
                         placeholder="Review"
                         {...register("text", {required: "Campo obrigatório"})}
