@@ -26,7 +26,7 @@ const Form = () => {
         data.movieId = parseInt(movieId);
         data.userId = userId;
       
-        makePrivateRequest({ url: '/reviews', method: 'POST', data });
+        makePrivateRequest({ url: '/reviews', method: 'POST', data });        
     }
 
     return (

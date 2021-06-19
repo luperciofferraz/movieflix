@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Movie, Review } from '../../../../core/types/Movie';
 import { makePrivateRequest } from '../../../../core/utils/request';
@@ -26,20 +26,28 @@ const MovieDetails = () => {
     const contentState = stateFromHTML(movie?.synopsis || '');
     const descriptionAsEditorState = EditorState.createWithContent(contentState);
 
-    useEffect(() => {
+    const getReviews = useCallback(() => {
 
         setIsLoading(true);
 
         makePrivateRequest({ url: `/movies/${movieId}` })
-            .then(response => 
-                {
-                    setMovie(response.data);
-                    setListaReviews(response.data.reviews);
-                }
-            )
-            .finally(() => setIsLoading(false));
+        
+        .then(response => 
+            {
+                setMovie(response.data);
+                setListaReviews(response.data.reviews);
+            }
+        )
 
-    },  [movieId]);
+        .finally(() => setIsLoading(false));
+
+    },[movieId]);
+
+    useEffect(() => {
+
+        getReviews();
+
+    },  [getReviews]);
 
     return (
 

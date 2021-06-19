@@ -11,6 +11,7 @@ import MovieFilter from '../../core/components/MovieFilter';
 const Movies = () => {
 
     const [moviesResponse, setMoviesResponse] = useState<MoviesResponse>();
+    
     const [isLoading, setIsLoading] = useState(false);
     const [activePage, setActivePage] = useState(0);
     const [genre, setGenre] = useState<Genre>();
@@ -24,24 +25,32 @@ const Movies = () => {
         }
 
         setIsLoading(true);
+
         makeRequest({ url: '/movies', params })
+           
             .then(response => {
+
                 setMoviesResponse(response.data)
-                console.log(response.data);
             
             })
             .finally(() => {
+
                 setIsLoading(false) 
+
             });
 
     }, [activePage, genre]);
 
     useEffect( () => {
+        
         getMovies();
+
     }, [getMovies]);
 
     const handleChangeGenre = (genre: Genre) => {
+        
         setActivePage(0);
+        
         setGenre(genre);
     }
 
