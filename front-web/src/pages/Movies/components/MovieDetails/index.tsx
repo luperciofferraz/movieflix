@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Movie, Review } from '../../../../core/types/Movie';
 import { makePrivateRequest } from '../../../../core/utils/request';
+import { isAllowedByRole } from '../../../../core/utils/auth';
 import MovieInfoLoader from '../../components/Loaders/MovieInfoLoader';
 import MovieDescriptionLoader from '../../components/Loaders/MovieDescriptionLoader';
 import { Editor } from "react-draft-wysiwyg";
@@ -100,7 +101,9 @@ const MovieDetails = () => {
 
             </div>
 
-            <Form listaReviews={listaReviews} setListaReviews={setListaReviews} />
+            { isAllowedByRole(['ROLE_MEMBER']) ?                   
+                <Form listaReviews={listaReviews} setListaReviews={setListaReviews} /> : <></>
+            }
 
             {listaReviews?.length ?
 
