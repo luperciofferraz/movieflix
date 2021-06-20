@@ -12,9 +12,7 @@ import { ReactComponent as StarImage } from '../../../../core/assets/images/star
 import './styles.scss';
 
 type ParamsType = {
-
     movieId: string;
-
 }
 
 const MovieDetails = () => {
@@ -102,7 +100,7 @@ const MovieDetails = () => {
 
             </div>
 
-            <Form />
+            <Form listaReviews={listaReviews} setListaReviews={setListaReviews} />
 
             {listaReviews?.length ?
 

@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import { getSessionData } from '../../../../core/utils/auth';
 import BaseForm from '../BaseForm';
+import { Review } from '../../../../core/types/Movie';
 import './styles.scss';
 
 export type ReviewData = {
@@ -15,9 +16,16 @@ type ParamsType = {
     movieId: string;
 }
 
-const Form = () => {
+type ParamsForm = {
+    listaReviews: Review[] | undefined;
+    setListaReviews: Function;
+}
 
-    const { register, handleSubmit, formState: { errors }  } = useForm<ReviewData>();
+let listaRetorno: Review[];
+
+const Form = ( {listaReviews, setListaReviews}: ParamsForm) => {
+
+    const { handleSubmit, register, formState: { errors }  } = useForm<ReviewData>();
     const { movieId } = useParams<ParamsType>(); 
     const userId = getSessionData().userId;
 
@@ -26,8 +34,15 @@ const Form = () => {
         data.movieId = parseInt(movieId);
         data.userId = userId;
       
-        makePrivateRequest({ url: '/reviews', method: 'POST', data });        
-    }
+        makePrivateRequest({ url: '/reviews', method: 'POST', data })
+        .then(response => 
+            {
+                listaRetorno = [];
+                listaRetorno.push(response.data);
+                listaReviews?.map(review => listaRetorno.push(review));
+                setListaReviews(listaRetorno);
+            });        
+    };
 
     return (
 
@@ -41,7 +56,7 @@ const Form = () => {
                             rows={4}
                             className={`input-base ${errors.text ? 'is-invalid' : ''} `} 
                             placeholder="Deixe sua avaliação aqui"
-                            {...register("text", {required: "Campo obrigatório"})}
+                            {...register("text", {required: "Campo obrigatório!"})}
                         />
 
                         {errors.text && (

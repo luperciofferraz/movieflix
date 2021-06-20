@@ -52,6 +52,11 @@
   border-radius: 10px !important;
 }
 
+.invalid-feedback {
+  color: #FFC700 !important;
+  font-weight: bold;
+}
+
 @media (max-width: 576px) {
 
   .product-form-container {
