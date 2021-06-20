@@ -38,8 +38,8 @@ const Form = ( {listaReviews, setListaReviews}: ParamsForm) => {
         .then(response => 
             {
                 listaRetorno = [];
-                listaRetorno.push(response.data);
                 listaReviews?.map(review => listaRetorno.push(review));
+                listaRetorno.push(response.data);
                 setListaReviews(listaRetorno);
             });        
     };

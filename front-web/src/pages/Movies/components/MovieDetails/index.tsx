@@ -110,7 +110,7 @@ const MovieDetails = () => {
             <div className="movie-reviews-container" >
 
                 {listaReviews?.map( review => (
-                    <div>
+                    <div key={review.id}>
                         <div className="movie-reviews-autor">
                             <div className="movie-reviews-star-image">
                                 <StarImage />

@@ -23,8 +23,6 @@ const MovieFilter = ({ genre, handleChangeGenre }: Props) => {
             .then(response => {
                 
                 setGenres(response.data);
-
-                console.log(response.data);
             
             })
 

@@ -50,11 +50,9 @@ const Navbar = () => {
                 {currentUser && (
                     <div className="button-logout">
                         <a href="#logout" 
-                           className="nav-link active d-inline"
+                           className="nav-link active" 
                            onClick={ (e) => {
                                
-                                setDrawerActive(false);
-
                                 handleLogout(e);
                         
                             } }
