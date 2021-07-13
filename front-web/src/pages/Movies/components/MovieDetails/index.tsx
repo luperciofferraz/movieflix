@@ -34,7 +34,7 @@ const MovieDetails = () => {
         .then(response => 
             {
                 setMovie(response.data);
-                setListaReviews(response.data.reviews);
+                setListaReviews(response.data.reviews.reverse());
             }
         )
 

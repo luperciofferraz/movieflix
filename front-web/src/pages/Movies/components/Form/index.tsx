@@ -25,11 +25,13 @@ let listaRetorno: Review[];
 
 const Form = ( {listaReviews, setListaReviews}: ParamsForm) => {
 
-    const { handleSubmit, register, formState: { errors }  } = useForm<ReviewData>();
+    const { reset, handleSubmit, register, formState: { errors }  } = useForm<ReviewData>();
     const { movieId } = useParams<ParamsType>(); 
     const userId = getSessionData().userId;
 
     const onSubmit = (data: ReviewData) => {
+
+        reset();
 
         data.movieId = parseInt(movieId);
         data.userId = userId;
@@ -38,8 +40,8 @@ const Form = ( {listaReviews, setListaReviews}: ParamsForm) => {
         .then(response => 
             {
                 listaRetorno = [];
-                listaReviews?.map(review => listaRetorno.push(review));
                 listaRetorno.push(response.data);
+                listaReviews?.forEach(review => listaRetorno.push(review));
                 setListaReviews(listaRetorno);
             });        
     };
