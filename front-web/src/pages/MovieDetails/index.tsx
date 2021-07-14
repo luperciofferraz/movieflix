@@ -3,12 +3,10 @@ import { useParams } from 'react-router-dom';
 import { Movie, Review } from '../../core/types/Movie';
 import { makePrivateRequest } from '../../core/utils/request';
 import { isAllowedByRole } from '../../core/utils/auth';
-import MovieInfoLoader from '../../core/components/Loaders/MovieInfoLoader';
-import MovieDescriptionLoader from '../../core/components/Loaders/MovieDescriptionLoader';
-import { Editor } from "react-draft-wysiwyg";
 import { stateFromHTML } from 'draft-js-import-html';
 import { EditorState } from 'draft-js';
 import Form from '../../core/components/Form';
+import MovieDetailsCard from '../../core/components/MovieDetailsCard';
 import { ReactComponent as StarImage } from '../../core/assets/images/star.svg';
 import './styles.scss';
 
@@ -50,56 +48,13 @@ const MovieDetails = () => {
 
     return (
 
-        <div className="product-details-container">
+        <div className="movie-details-container">
 
-            <div className="card-base border-radius-10">
-
-                <div className="product-details-info">
-
-                    {isLoading ? <MovieInfoLoader /> : (
-
-                        <div className="product-details-card">
-
-                            <img src={movie?.imgUrl} alt={movie?.title} className="product-details-image" />
-
-                        </div>
-                    )}
-
-                    <div className="product-details-card">
-                        {isLoading ? <MovieDescriptionLoader /> : (
-
-                            <>
-                                <div className="product-info-fields">
-
-                                    <div className="movie-details-title">
-                                        {movie?.title}
-                                    </div>
-
-                                    <div className="movie-details-year">
-                                        {movie?.year}
-                                    </div>
-
-                                    <div className="movie-details-subtitle">
-                                        {movie?.subTitle}
-                                    </div>
-
-                                </div>
-
-                                <Editor
-                                    editorClassName="movie-details-synopsis"
-                                    editorState={descriptionAsEditorState}
-                                    toolbarHidden
-                                    readOnly
-                                />
-
-                            </>
-
-                        )}
-                    </div>
-
-                </div>
-
-            </div>
+            <MovieDetailsCard
+                descriptionAsEditorState={descriptionAsEditorState}
+                isLoading={isLoading}
+                movie={movie}
+            />
 
             { isAllowedByRole(['ROLE_MEMBER']) ?                   
                 <Form listaReviews={listaReviews} setListaReviews={setListaReviews} /> : <></>
