@@ -7,7 +7,7 @@ import { stateFromHTML } from 'draft-js-import-html';
 import { EditorState } from 'draft-js';
 import Form from '../../core/components/Form';
 import MovieDetailsCard from '../../core/components/MovieDetailsCard';
-import { ReactComponent as StarImage } from '../../core/assets/images/star.svg';
+import ReviewsCard from '../../core/components/ReviewsCard';
 import './styles.scss';
 
 type ParamsType = {
@@ -62,27 +62,11 @@ const MovieDetails = () => {
 
             {listaReviews?.length ?
 
-                <div className="movie-reviews-container" >
+                <ReviewsCard 
+                    listaReviews={listaReviews}
+                />
 
-                    {listaReviews?.map( review => (
-                        <div key={review.id}>
-                            <div className="movie-reviews-autor">
-                                <div className="movie-reviews-star-image">
-                                    <StarImage />
-                                </div>
-                                <div className="movie-reviews-autor-name">
-                                    {review.user.name}
-                                </div>
-                            </div>
-                            <div className="movie-reviews-text">
-                                {review.text}
-                            </div>
-                        </div>
-                    ))}
-
-                </div>
-
-            : <></>
+                : <></>
 
             }
 
