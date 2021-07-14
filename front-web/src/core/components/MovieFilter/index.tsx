@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import Select from 'react-select';
 import './styles.scss';
-import { makePrivateRequest } from '../../../core/utils/request';
-import { Genre } from '../../../core/types/Movie';
+import { makePrivateRequest } from '../../utils/request';
+import { Genre } from '../../types/Movie';
 
 type Props = {
     genre?: Genre;

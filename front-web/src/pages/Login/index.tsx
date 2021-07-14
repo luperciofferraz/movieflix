@@ -1,8 +1,8 @@
 import './styles.scss';
-import { ReactComponent as AuthImage } from './../../core/assets/images/auth.svg';
-import Login from './components/Login';
+import { ReactComponent as AuthImage } from '../../core/assets/images/auth.svg';
+import Auth from '../../core/components/Auth';
 
-const Auth = () => (
+const Login = () => (
 
     <div className="auth-container">
 
@@ -22,7 +22,7 @@ const Auth = () => (
 
         <div className="auth-content">
 
-            <Login />
+            <Auth />
 
         </div>
 
@@ -30,5 +30,5 @@ const Auth = () => (
 
 );
 
-export default Auth;
+export default Login;
 

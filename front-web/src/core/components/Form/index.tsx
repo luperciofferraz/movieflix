@@ -1,9 +1,9 @@
-import { makePrivateRequest } from '../../../../core/utils/request';
+import { makePrivateRequest } from '../../utils/request';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
-import { getSessionData } from '../../../../core/utils/auth';
+import { getSessionData } from '../../utils/auth';
 import BaseForm from '../BaseForm';
-import { Review } from '../../../../core/types/Movie';
+import { Review } from '../../types/Movie';
 import './styles.scss';
 
 export type ReviewData = {

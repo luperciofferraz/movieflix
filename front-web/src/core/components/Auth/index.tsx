@@ -1,11 +1,11 @@
-import ButtonIcon from '../../../../core/components/ButtonIcon';
+import ButtonIcon from '../ButtonIcon';
 import { useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import AuthCard from '../Card';
+import AuthCard from '../AuthCard';
 import './styles.scss';
-import { makeLogin } from '../../../../core/utils/request';
-import { saveSessionData } from '../../../../core/utils/auth';
+import { makeLogin } from '../../utils/request';
+import { saveSessionData } from '../../utils/auth';
 
 type FormData = {
     username: string;
@@ -16,7 +16,7 @@ type LocationState = {
     from: string;
 }
 
-const Login = () => {
+const Auth = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
 
@@ -114,4 +114,4 @@ const Login = () => {
 
 };
 
-export default Login;
+export default Auth;

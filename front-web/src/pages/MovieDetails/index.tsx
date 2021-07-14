@@ -1,15 +1,15 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Movie, Review } from '../../../../core/types/Movie';
-import { makePrivateRequest } from '../../../../core/utils/request';
-import { isAllowedByRole } from '../../../../core/utils/auth';
-import MovieInfoLoader from '../../components/Loaders/MovieInfoLoader';
-import MovieDescriptionLoader from '../../components/Loaders/MovieDescriptionLoader';
+import { Movie, Review } from '../../core/types/Movie';
+import { makePrivateRequest } from '../../core/utils/request';
+import { isAllowedByRole } from '../../core/utils/auth';
+import MovieInfoLoader from '../../core/components/Loaders/MovieInfoLoader';
+import MovieDescriptionLoader from '../../core/components/Loaders/MovieDescriptionLoader';
 import { Editor } from "react-draft-wysiwyg";
 import { stateFromHTML } from 'draft-js-import-html';
 import { EditorState } from 'draft-js';
-import Form from '../Form';
-import { ReactComponent as StarImage } from '../../../../core/assets/images/star.svg';
+import Form from '../../core/components/Form';
+import { ReactComponent as StarImage } from '../../core/assets/images/star.svg';
 import './styles.scss';
 
 type ParamsType = {
@@ -107,25 +107,25 @@ const MovieDetails = () => {
 
             {listaReviews?.length ?
 
-            <div className="movie-reviews-container" >
+                <div className="movie-reviews-container" >
 
-                {listaReviews?.map( review => (
-                    <div key={review.id}>
-                        <div className="movie-reviews-autor">
-                            <div className="movie-reviews-star-image">
-                                <StarImage />
+                    {listaReviews?.map( review => (
+                        <div key={review.id}>
+                            <div className="movie-reviews-autor">
+                                <div className="movie-reviews-star-image">
+                                    <StarImage />
+                                </div>
+                                <div className="movie-reviews-autor-name">
+                                    {review.user.name}
+                                </div>
                             </div>
-                            <div className="movie-reviews-autor-name">
-                                {review.user.name}
+                            <div className="movie-reviews-text">
+                                {review.text}
                             </div>
                         </div>
-                        <div className="movie-reviews-text">
-                            {review.text}
-                        </div>
-                    </div>
-                ))}
+                    ))}
 
-            </div>
+                </div>
 
             : <></>
 
