@@ -10,7 +10,7 @@ const BaseForm = ( { children } : Props) => {
 
     return (
 
-        <div className="admin-base-form card-base">
+        <div className="review-base-form card-base">
 
             {children}
 

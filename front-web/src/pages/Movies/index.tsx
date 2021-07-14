@@ -58,16 +58,12 @@ const Movies = () => {
 
         <div className="catalog-container pages-color">
 
-            <div className="filter-container">
+            <MovieFilter 
+                genre={genre}
+                handleChangeGenre = {handleChangeGenre}
+            />
 
-                <MovieFilter 
-                    genre={genre}
-                    handleChangeGenre = {handleChangeGenre}
-                />
-
-            </div>
-
-            <div className="catalog-products">
+            <div className="catalog-movies">
 
                 {isLoading ? <MovieCardLoader /> : (
                     

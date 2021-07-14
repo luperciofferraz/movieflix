@@ -34,23 +34,27 @@ const MovieFilter = ({ genre, handleChangeGenre }: Props) => {
 
     return (
 
-        <div className="card-base product-filters-container">
+        <div className="filter-container">
 
-            <Select
-                name="genres"
-                key={`select-${genre?.id}`}
-                value={genre}
-                isLoading={isLoadingGenres}
-                options={genres}
-                getOptionLabel={(option: Genre) => option.name} 
-                getOptionValue={(option: Genre) => String(option.id)} 
-                className="filter-select-container"
-                classNamePrefix="product-categories-select"
-                placeholder="Gêneros" 
-                inputId="genres"
-                onChange={value => handleChangeGenre(value as Genre)}
-                isClearable
-            />
+            <div className="card-base movie-filters-container">
+
+                <Select
+                    name="genres"
+                    key={`select-${genre?.id}`}
+                    value={genre}
+                    isLoading={isLoadingGenres}
+                    options={genres}
+                    getOptionLabel={(option: Genre) => option.name} 
+                    getOptionValue={(option: Genre) => String(option.id)} 
+                    className="filter-select-container"
+                    classNamePrefix="movie-genres-select"
+                    placeholder="Gêneros" 
+                    inputId="genres"
+                    onChange={value => handleChangeGenre(value as Genre)}
+                    isClearable
+                />
+
+            </div>
 
         </div>
 

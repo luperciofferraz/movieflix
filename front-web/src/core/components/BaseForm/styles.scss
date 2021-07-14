@@ -1,4 +1,4 @@
-.admin-base-form {
+.review-base-form {
     flex: 1;
     align-items: center;
     justify-content: center;
@@ -28,7 +28,7 @@
 
 @media (max-width: 768px) {
 
-    .admin-base-form {
+    .review-base-form {
         width: 100%;
     }
 
@@ -36,12 +36,9 @@
 
 @media (max-width: 576px) {
 
-    .admin-base-form {
-        
+    .review-base-form {
         width: 100%;
-
         flex-direction: column;
-        
     }
 
 }

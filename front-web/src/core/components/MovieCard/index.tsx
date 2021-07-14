@@ -10,25 +10,25 @@ type Props = {
 
 const MovieCard = ( { movie }: Props) => (
 
-    <div className="card-base border-radius-10 product-card"> 
+    <div className="card-base border-radius-10 movie-card"> 
 
-        <img src={movie.imgUrl} alt={movie.title} className="product-card-image" />
+        <img src={movie.imgUrl} alt={movie.title} className="movie-card-image" />
 
-        <div className="product-info">
+        <div className="movie-info">
 
-            <h6 className="product-name">
+            <h6 className="movie-name">
 
                 {movie.title}
 
             </h6>
 
-            <h5 className="product-year">
+            <h5 className="movie-year">
 
                 {movie.year}
 
             </h5>
 
-            <h5 className="product-subtitle">
+            <h5 className="movie-subtitle">
 
                 {movie.subTitle}
 
