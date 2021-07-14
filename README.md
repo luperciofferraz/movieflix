@@ -5,7 +5,6 @@ Sistema de um catálogo de Filmes e seus respectivos Gêneros, onde usuários po
 O projeto está subdividido da seguinte forma:
 
 - Front-Web: corresponde ao Front-End da aplicação, desenvolvido em React.
-- MovieFlixApp: corresponde ao projeto Mobile, desenvolvido em React Native.
 - Back-end: corresponde ao Back-End do projeto, desenvolvido em Spring Boot (Java).
 
 Desenvolvido utilizando Spring Boot, o Back-End do projeto está sendo concebido utilizando as melhores práticas em arquitetura de API java, sendo dividido nas seguintes camadas:
