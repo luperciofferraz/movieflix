@@ -4,8 +4,9 @@ Sistema de um catálogo de Filmes e seus respectivos Gêneros, onde usuários po
 
 O projeto está subdividido da seguinte forma:
 
-- Front-Web: corresponde ao Front-End da aplicação, desenvolvido em React.
+- Front-Web: corresponde ao Front-End da aplicação, desenvolvido em React. (https://lff-movieflix.netlify.app/)
 - Back-end: corresponde ao Back-End do projeto, desenvolvido em Spring Boot (Java). (https://lff-movieflix.herokuapp.com/)
+- MovieFlixApp: Versão Mobile do App MovieFlix: Código fonte localizado no respositório https://github.com/luperciofferraz/movieflixapp 
 
 Desenvolvido utilizando Spring Boot, o Back-End do projeto está sendo concebido utilizando as melhores práticas em arquitetura de API java, sendo dividido nas seguintes camadas:
 
