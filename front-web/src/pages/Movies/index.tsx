@@ -20,7 +20,7 @@ const Movies = () => {
 
         const params = {
             page: activePage,
-            linesPerPage: 8,
+            linesPerPage: 6,
             genreId: genre?.id
         }
 
