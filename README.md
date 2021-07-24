@@ -10,17 +10,30 @@ Sistema de um catálogo de Filmes e seus respectivos Gêneros, onde usuários po
 
 O projeto está subdividido da seguinte forma:
 
-## Web
+## Web : corresponde ao Front-End da aplicação, desenvolvido em React.
+![Web1](https://github.com/luperciofferraz/Assets/blob/main/MFtelaCatalogo.png) 
+![Web2](https://github.com/luperciofferraz/Assets/blob/main/MFtelaDetalhes.png)
 
-- Front-Web: corresponde ao Front-End da aplicação, desenvolvido em React. 
+### Tecnologias Utilizadas
+
+- React Router Dom
 
 ## Mobile
 
 - MovieFlixApp: Versão Mobile do App MovieFlix: Código fonte localizado no respositório https://github.com/luperciofferraz/movieflixapp 
 
+
+### Tecnologias Utilizadas
+
+- Expo
+
 ## Back End:
 
-Desenvolvido em Spring Boot (Java). (https://lff-movieflix.herokuapp.com/)
+https://lff-movieflix.herokuapp.com/
+
+### Tecnologias Utilizadas
+
+- Spŕing Boot
 
 ### Detalhes do Back End:
 
