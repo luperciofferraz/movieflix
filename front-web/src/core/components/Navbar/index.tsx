@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import './styles.scss';
 import { Link, useLocation } from 'react-router-dom';
 import { getAccessTokenDecoded, logout } from '../../utils/auth';
-import menu from '../../assets/images/menu.svg';
 
 const Navbar = () => {
     
@@ -34,16 +33,6 @@ const Navbar = () => {
             <Link to="/movies" className="nav-logo-text">
                 <h4>MovieFlix</h4>
             </Link>
-
-            <button 
-                className="menu-mobile-btn" 
-                type="button"  
-                onClick = {() => setDrawerActive(!drawerActive)}
-            >
-
-                <img src={menu} alt="Mobile Menu"/>
-
-            </button>
 
             <div className="user-info-dnone text-right">
 
