@@ -1,4 +1,4 @@
-# movieflix 
+# Projeto Movieflix 
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/luperciofferraz/movieflix/blob/main/LICENSE)
 
@@ -6,11 +6,12 @@
 
 https://lff-movieflix.netlify.app/
 
-Sistema de um catálogo de Filmes e seus respectivos Gêneros, onde usuários podem consultar o catálogo e, dependendo do perfil de acesso desse usuário, o mesmo pode, também, avaliar os Filmes do catálogo.
+Projeto de conclusão do Bootcamp Dev Superior (https://devsuperior.com.br/), o projeto consiste de um Sistema de catálogo de Filmes e seus respectivos Gêneros, onde usuários podem consultar o catálogo e, dependendo do perfil de acesso desse usuário, o mesmo pode, também, avaliar os Filmes do catálogo.
 
 O projeto está subdividido da seguinte forma:
 
-## Web : corresponde ao Front-End da aplicação, desenvolvido em React.
+## Web : Corresponde ao Front-End da aplicação, desenvolvido em React.
+
 ![Web1](https://github.com/luperciofferraz/Assets/blob/main/MFtelaCatalogo.png) 
 ![Web2](https://github.com/luperciofferraz/Assets/blob/main/MFtelaDetalhes.png)
 
@@ -23,7 +24,9 @@ O projeto está subdividido da seguinte forma:
 - React Toastify
 - Axios
 
-## Mobile : Versão Mobile do App MovieFlix, cujo código fonte da Aplicação está localizado no respositório https://github.com/luperciofferraz/movieflixapp 
+## Mobile : Versão Mobile do App MovieFlix
+
+### O código fonte está localizado no respositório https://github.com/luperciofferraz/movieflixapp 
 
 ### Tecnologias / Bibliotecas utilizadas
 
