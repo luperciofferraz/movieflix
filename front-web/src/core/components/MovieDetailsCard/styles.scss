@@ -69,10 +69,6 @@
         margin: 0 auto;
     }
 
-    .movie-details {
-        flex-direction: column;
-    }
-
     .movie-info-fields {
         border: 0px;
         padding: 0px 10px;
@@ -92,15 +88,10 @@
 
 @media (max-width: 576px) {
 
-    .movie-details-container {
-        margin-top: 5px;
-        padding: 10px;
-    }
-
     .movie-details {
         display: flex;
         flex-direction: column;
-        padding: 30px;
+        padding: 10px;
     }
 
     .movie-details-card {
@@ -112,15 +103,25 @@
     }
 
     .movie-details-image {
-        width: 200px;
+        width: 100%;
         height: 200px;
+    }
+
+    .movie-details-title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+        color: #FFFFFF;
     }
 
     .movie-info-fields {
         width: 100%;
+        margin-bottom: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     .movie-description-text {

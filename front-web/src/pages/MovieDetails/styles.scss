@@ -1,6 +1,15 @@
 .movie-details-container {
+    
     padding: 40px 135px 70px 135px;
 }
 
 
+@media (max-width: 576px) {
 
+    .movie-details-container {
+        width: 100%;
+        margin-top: 5px;
+        padding: 10px;
+    }
+
+}
