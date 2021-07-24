@@ -23,10 +23,7 @@ O projeto está subdividido da seguinte forma:
 - React Toastify
 - Axios
 
-## Mobile
-
-- MovieFlixApp: Versão Mobile do App MovieFlix: Código fonte localizado no respositório https://github.com/luperciofferraz/movieflixapp 
-
+## Mobile : Versão Mobile do App MovieFlix, cujo código fonte da Aplicação está localizado no respositório https://github.com/luperciofferraz/movieflixapp 
 
 ### Tecnologias / Bibliotecas utilizadas
 
