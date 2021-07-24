@@ -14,18 +14,30 @@ O projeto está subdividido da seguinte forma:
 ![Web1](https://github.com/luperciofferraz/Assets/blob/main/MFtelaCatalogo.png) 
 ![Web2](https://github.com/luperciofferraz/Assets/blob/main/MFtelaDetalhes.png)
 
-### Tecnologias Utilizadas
+### Tecnologias / Bibliotecas utilizadas
 
 - React Router Dom
+- React Select
+- React Hook Form
+- React Paginate
+- React Toastify
+- Axios
 
 ## Mobile
 
 - MovieFlixApp: Versão Mobile do App MovieFlix: Código fonte localizado no respositório https://github.com/luperciofferraz/movieflixapp 
 
 
-### Tecnologias Utilizadas
+### Tecnologias / Bibliotecas utilizadas
 
 - Expo
+- React Native Async Storage
+- React Navigation
+- React Hook Form
+- React Native Gesture Handler
+- React Native Safe Area Context
+- React Native Svg Transform
+- React Native Tiny Toast
 
 ## Back End:
 
@@ -34,6 +46,9 @@ https://lff-movieflix.herokuapp.com/
 ### Tecnologias Utilizadas
 
 - Spŕing Boot
+- Mockito
+- JUnit
+- Repository
 
 ### Detalhes do Back End:
 
