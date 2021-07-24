@@ -2,11 +2,13 @@
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/luperciofferraz/movieflix/blob/main/LICENSE)
 
+Projeto de conclusão do Bootcamp Dev Superior (https://devsuperior.com.br)
+
 # Sobre o Projeto
 
 https://lff-movieflix.netlify.app/
 
-Projeto de conclusão do Bootcamp Dev Superior (https://devsuperior.com.br/), o projeto consiste de um Sistema de catálogo de Filmes e seus respectivos Gêneros, onde usuários podem consultar o catálogo e, dependendo do perfil de acesso desse usuário, o mesmo pode, também, avaliar os Filmes do catálogo.
+O projeto consiste de um Sistema de catálogo de Filmes e seus respectivos Gêneros, onde usuários podem consultar o catálogo e, dependendo do perfil de acesso desse usuário, o mesmo pode, também, avaliar os Filmes do catálogo.
 
 O projeto está subdividido da seguinte forma:
 
