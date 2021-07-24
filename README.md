@@ -2,13 +2,27 @@
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/luperciofferraz/movieflix/blob/main/LICENSE)
 
+# Sobre o Projeto
+
+https://lff-movieflix.netlify.app/
+
 Sistema de um catálogo de Filmes e seus respectivos Gêneros, onde usuários podem consultar o catálogo e, dependendo do perfil de acesso desse usuário, o mesmo pode, também, avaliar os Filmes do catálogo.
 
 O projeto está subdividido da seguinte forma:
 
-- Front-Web: corresponde ao Front-End da aplicação, desenvolvido em React. (https://lff-movieflix.netlify.app/)
-- Back-end: corresponde ao Back-End do projeto, desenvolvido em Spring Boot (Java). (https://lff-movieflix.herokuapp.com/)
+## Web
+
+- Front-Web: corresponde ao Front-End da aplicação, desenvolvido em React. 
+
+## Mobile
+
 - MovieFlixApp: Versão Mobile do App MovieFlix: Código fonte localizado no respositório https://github.com/luperciofferraz/movieflixapp 
+
+## Back End:
+
+Desenvolvido em Spring Boot (Java). (https://lff-movieflix.herokuapp.com/)
+
+### Detalhes do Back End:
 
 Desenvolvido utilizando Spring Boot, o Back-End do projeto está sendo concebido utilizando as melhores práticas em arquitetura de API java, sendo dividido nas seguintes camadas:
 
