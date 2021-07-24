@@ -14,8 +14,7 @@ O projeto está subdividido da seguinte forma:
 
 ## Web : Corresponde ao Front-End da aplicação, desenvolvido em React.
 
-![Web1](https://github.com/luperciofferraz/Assets/blob/main/MFtelaCatalogo.png) 
-![Web2](https://github.com/luperciofferraz/Assets/blob/main/MFtelaDetalhes.png)
+![Web1](https://github.com/luperciofferraz/Assets/blob/main/MFtelaCatalogo.png) ![Web2](https://github.com/luperciofferraz/Assets/blob/main/MFtelaDetalhes.png)
 
 ### Tecnologias / Bibliotecas utilizadas
 
@@ -27,6 +26,9 @@ O projeto está subdividido da seguinte forma:
 - Axios
 
 ## Mobile : Versão Mobile do App MovieFlix
+
+![Mob1](https://github.com/luperciofferraz/Assets/blob/main/MFMobLogin01.jpg) ![Mob2](https://github.com/luperciofferraz/Assets/blob/main/MFMobLogin02.jpg) 
+![Mob3](https://github.com/luperciofferraz/Assets/blob/main/MFMobCatalogo.jpg) ![Mob4](https://github.com/luperciofferraz/Assets/blob/main/MFMobDetalhes.jpg)
 
 ### O código fonte está localizado no respositório https://github.com/luperciofferraz/movieflixapp 
 
