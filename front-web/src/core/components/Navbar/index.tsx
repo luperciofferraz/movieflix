@@ -5,8 +5,6 @@ import { getAccessTokenDecoded, logout } from '../../utils/auth';
 
 const Navbar = () => {
     
-    const [drawerActive, setDrawerActive] = useState(false);
-
     const [currentUser, setCurrentUser] = useState('');
 
     const location = useLocation();
