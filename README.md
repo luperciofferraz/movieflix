@@ -27,6 +27,8 @@ O projeto está subdividido da seguinte forma:
 
 ## Mobile : Versão Mobile do App MovieFlix
 
+https://expo.dev/@luperciofferraz/movieflixapp
+
 ![Mob1](https://github.com/luperciofferraz/Assets/blob/main/MFMobLogin01.jpg) ![Mob2](https://github.com/luperciofferraz/Assets/blob/main/MFMobLogin02.jpg) 
 ![Mob3](https://github.com/luperciofferraz/Assets/blob/main/MFMobCatalogo.jpg) ![Mob4](https://github.com/luperciofferraz/Assets/blob/main/MFMobDetalhes.jpg)
 
