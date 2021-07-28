@@ -1,5 +1,5 @@
 .catalog-container {
-    padding: 26px 135px 26px 135px;
+    padding: 20px 135px 20px 135px;
 }
 
 .catalog-title {
@@ -9,10 +9,10 @@
 }
 
 .catalog-movies {
-    margin-top: 43px;
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fill, 250px);
-    grid-gap: 33px 20px;
+    grid-gap: 20px 20px;
     justify-content: space-between;
 }
 
