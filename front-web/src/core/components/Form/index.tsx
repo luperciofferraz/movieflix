@@ -63,7 +63,7 @@ const Form = ( {listaReviews, setListaReviews}: ParamsForm) => {
 
                         {errors.text && (
                         
-                            <div className="invalid-feedback">
+                            <div className="errorText">
                                 {errors.text.message}
                             </div>
                         

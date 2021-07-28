@@ -44,16 +44,6 @@ const Auth = () => {
 
         <AuthCard title="login" >
             
-            {hasError && (
-
-                <div className="alert alert-danger">
-
-                    Usuário ou senha inválidos!
-
-                </div>
-
-            )}
-            
             <form onSubmit={handleSubmit(onSubmit)} className="login-form">
 
                 <div className="margin-bottom-30">
@@ -75,7 +65,7 @@ const Auth = () => {
 
                     {errors.username && (
                     
-                        <div className="invalid-feedback d-block">
+                        <div className="errorText d-block">
                             {errors.username.message}
                         </div>
 
@@ -94,13 +84,19 @@ const Auth = () => {
 
                     {errors.password && (
                     
-                        <div className="invalid-feedback d-block">
+                        <div className="errorText d-block">
                             {errors.password.message}
                         </div>
                     
                     )}
 
                 </div>
+
+                {hasError && (
+                    <div className="errorText">
+                        Usuário ou senha inválidos!
+                    </div>
+                )}
 
                 <div className="login-submit" >
                     <ButtonIcon text="Logar" />
